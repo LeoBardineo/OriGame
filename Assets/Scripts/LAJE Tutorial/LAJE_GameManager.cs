@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public void ReloadScreen()
     {
+        Debug.Log("oi");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

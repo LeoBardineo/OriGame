@@ -14,8 +14,8 @@ public class PlayerControl : MonoBehaviour
     public int pontos = 0, pontosParaGanhar = 0;
 
     [Header("UI")]
-    public GameObject TelaVitoria, TelaDerrota;
-    public TMP_Text TextoDeDerrota;
+    public GameObject TelaVitoria, TelaDerrota, TelaPontos;
+    public TMP_Text TextoDeDerrota, TextoPontos;
 
     private void Movement()
     {
@@ -33,14 +33,22 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    public void End()
+    {
+        TelaPontos.SetActive(false);
+        Time.timeScale = 0;
+    }
+
     public void Die()
     {
+        End();
         TextoDeDerrota.SetText("Perdeu!\nVocê pegou " + pontos +" moedas.");
         TelaDerrota.SetActive(true);
     }
 
     public void Win()
     {
+        End();
         if (pontos >= pontosParaGanhar)
         {
             TelaVitoria.SetActive(true);
@@ -53,8 +61,14 @@ public class PlayerControl : MonoBehaviour
     public void GanhaPonto()
     {
         pontos++;
-        Debug.Log("Pontos: " + pontos);
+        TextoPontos.SetText(pontos.ToString() + " pontos");
     }
+
+    //void Start()
+    //{
+    //    TelaPontos.SetActive(true);
+    //    Time.timeScale = 1;
+    //}
 
     // Update is called once per frame
     void Update()
