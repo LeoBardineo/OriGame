@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstaculo
-  - Final
-  - Moeda
   - Ground
+  - Obstaculo
+  - Fim
+  - ViraAviao
   layers:
   - Default
   - TransparentFX
