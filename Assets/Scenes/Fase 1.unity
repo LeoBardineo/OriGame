@@ -448,11 +448,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRB: {fileID: 613231489}
-  speed: 5
+  horizontalSpeed: 5
+  aviaoSpeed: 10
   jumpForce: 10
   maxJumps: 1
   gravityScale: 5
   grounded: 0
+  isAviao: 0
+  transformando: 0
 --- !u!95 &613231491
 Animator:
   serializedVersion: 4
