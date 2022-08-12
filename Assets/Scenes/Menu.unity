@@ -561,7 +561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 133}
+  m_AnchoredPosition: {x: 0, y: 116}
   m_SizeDelta: {x: 405.5096, y: 66.8886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568758148
@@ -1620,7 +1620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 0.0000038147}
+  m_AnchoredPosition: {x: -33, y: 0.0000038147}
   m_SizeDelta: {x: 495.0518, y: 155.2416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866413373
@@ -1643,8 +1643,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Viva as aventuras de uma folha de papel que literamente se desdobra para
-    vencer os obst\xE1culos pela casa.\nSpace - Pula\nEsc - Pausa"
+  m_text: 'Viva as aventuras de uma folha de papel que literamente se desdobra para
+    vencer os desafios que aparecem pela casa.
+
+    Space - Pula
+
+    Esc - Pausa'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b40c5800739f1546b57b424f9b42936, type: 2}
   m_sharedMaterial: {fileID: 8763330828049333996, guid: 1b40c5800739f1546b57b424f9b42936, type: 2}
@@ -1671,8 +1675,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1707,7 +1711,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -7.272629, y: 0, z: -73.90845, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
