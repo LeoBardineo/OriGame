@@ -40,8 +40,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-        public void TryAgain()
+    public void TryAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
