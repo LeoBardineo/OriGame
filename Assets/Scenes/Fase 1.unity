@@ -155,7 +155,6 @@ GameObject:
   - component: {fileID: 147425567}
   - component: {fileID: 147425570}
   - component: {fileID: 147425571}
-  - component: {fileID: 147425572}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -227,7 +226,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &147425570
 MonoBehaviour:
@@ -341,20 +340,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &147425572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147425566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e42579245da30c48a68a782999c1578, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SomPulo: {fileID: 8300000, guid: f1a431d748d61324f9eccd035c6405ab, type: 3}
-  SomTransformacao: {fileID: 8300000, guid: d307baf26b94d434085abe21996c56ff, type: 3}
 --- !u!1001 &173581385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_LocalScale.x
@@ -460,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 67827dd07aadac546b41364a37bd438f, type: 2}
     - target: {fileID: -7909074879027497233, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_TagString
-      value: ViraAviao
+      value: Obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: -7748849832353751488, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -836,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 021c9b08332fe9642b54e6ebedc468c6, type: 2}
     - target: {fileID: -108112719799382941, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_TagString
-      value: ViraAviao
+      value: Obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: -94868676218535955, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -864,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 31d87cc786f61794b917e4c75614fb61, type: 2}
     - target: {fileID: 202330686925694784, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_TagString
-      value: ViraAviao
+      value: Obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 225527622212441691, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -908,7 +893,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cd2ef9962ecc89b4998abee02dbacba6, type: 2}
     - target: {fileID: 1085281712191903006, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_TagString
-      value: ViraAviao
+      value: Obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 1088623783002193853, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -940,7 +925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2001232091703274150, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_TagString
-      value: ViraAviao
+      value: Obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 2090078632773740671, guid: 84bc69d3a1244bd4595e8bfc2ff411bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1468,6 +1453,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184549009}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &267123639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267123641}
+  - component: {fileID: 267123640}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &267123640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267123639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e42579245da30c48a68a782999c1578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Pulo
+    clip: {fileID: 8300000, guid: f1a431d748d61324f9eccd035c6405ab, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Transformacao
+    clip: {fileID: 8300000, guid: d307baf26b94d434085abe21996c56ff, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &267123641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267123639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314911888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1600,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &324236389 stripped
 GameObject:
@@ -1771,7 +1811,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -47.004}
 --- !u!1 &413414705
 GameObject:
@@ -2117,7 +2157,7 @@ Transform:
   m_Children:
   - {fileID: 813085053}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
 --- !u!54 &613231489
 Rigidbody:
@@ -2158,7 +2198,6 @@ MonoBehaviour:
   transformando: 0
   isPaused: 0
   UIManager: {fileID: 663264035}
-  AudioManagerScript: {fileID: 147425572}
 --- !u!95 &613231491
 Animator:
   serializedVersion: 4
@@ -2343,6 +2382,7 @@ MonoBehaviour:
   TelaVitoria: {fileID: 413414705}
   TelaDerrota: {fileID: 1120200986}
   TelaPause: {fileID: 827712591}
+  Camera: {fileID: 147425566}
 --- !u!114 &663264036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2420,7 +2460,7 @@ RectTransform:
   - {fileID: 1120200990}
   - {fileID: 827712595}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3390,7 +3430,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961905903 stripped
 GameObject:
@@ -5051,7 +5091,7 @@ Transform:
   - {fileID: 455128320}
   - {fileID: 1825272484}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024278448
 GameObject:

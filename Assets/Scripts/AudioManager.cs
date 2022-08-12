@@ -2,31 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
-    private AudioSource SourceSomPulo, SourceSomTransformacao;
-    public AudioClip SomPulo, SomTransformacao;
+    public Sound[] sounds;
 
-    public void Play(string som)
+    public void Play(string name)
     {
-        Debug.Log("???");
-        switch (som)
-        {
-            case "pulo":
-                Debug.Log("deveria ir");
-                SourceSomPulo.PlayOneShot(SomPulo);
-                break;
-            case "transformacao":
-                SourceSomTransformacao.PlayOneShot(SomTransformacao);
-                break;
-        }
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Play();
     }
 
     // Start is called before the first frame update
     void Awake()
     {
-        SourceSomPulo = gameObject.AddComponent<AudioSource>();
-        SourceSomTransformacao = gameObject.AddComponent<AudioSource>();
+        foreach(Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+        }
     }
 }

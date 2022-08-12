@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public bool isAviao = false, transformando = false, isPaused = false;
     private Animator animator;
     public UIManager UIManager;
-    public AudioManager AudioManagerScript;
+    //public AudioManager AudioManagerScript;
 
     private IEnumerator Metamorfose()
     {
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
             isAviao = !isAviao;
             animator.SetBool("transformando", true);            
             animator.SetBool("isAviao", isAviao);
-            AudioManagerScript.Play("transformacao");
+            FindObjectOfType<AudioManager>().Play("Transformacao");
             float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
             yield return new WaitForSecondsRealtime(animationLength);
             transformando = false;
@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
                 {
                     Vector3 upForce = Vector3.up * jumpForce;
                     playerRB.AddForce(upForce, ForceMode.Impulse);
-                    AudioManagerScript.Play("pulo");
                 }
                 animator.SetFloat("verticalVelocity", playerRB.velocity.y);
             }
@@ -55,6 +54,7 @@ public class PlayerController : MonoBehaviour
                     Vector3 upForce = Vector3.up * jumpForce;
                     playerRB.AddForce(upForce, ForceMode.Impulse);
                     jumpCounter++;
+                    FindObjectOfType<AudioManager>().Play("Pulo");
                 }
             }
         }
